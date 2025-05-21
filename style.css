@@ -1,0 +1,152 @@
+/* Definição das Variáveis de Cor */
+:root {
+    --color-bg-body: #e9ecef;
+    --color-white: #FFFFFF; 
+    --color-black: #333333; 
+    
+    --color-primary: #0078ff;
+    --color-success: #4CAF50;
+    --color-danger: #f44336;
+    --color-warning: #ffc107;
+    
+    --shadow-light: rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg-body);
+    color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteúdo principal */
+main {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/* Valor do contador */
+#valor-contador {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--color-success);
+    margin-bottom: 30px;
+}
+
+/* Botões de controle */
+.botoes-controle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo geral dos botões */
+button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+/* Botão de incrementar - sempre verde */
+#incrementar-btn {
+    background-color: var(--color-success) !important;
+}
+
+#incrementar-btn:hover {
+    background-color: #3e8e41 !important;
+}
+
+/* Botão de decrementar - sempre vermelho */
+#decrementar-btn {
+    background-color: var(--color-danger) !important;
+}
+
+#decrementar-btn:hover {
+    background-color: #d32f2f !important;
+}
+
+/* Botão de resetar */
+#resetar-btn {
+    background-color: var(--color-warning);
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#resetar-btn:hover {
+    background-color: #e6ac00;
+}
+
+/* Mensagem de alerta */
+#mensagem-alerta {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    color: #666; 
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+    
+    #valor-contador {
+        font-size: 4rem;
+    }
+    
+    .botoes-controle {
+        flex-direction: column;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
